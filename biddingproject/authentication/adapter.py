@@ -1,0 +1,12 @@
+from allauth.account.adapter import DefaultAccountAdapter 
+from allauth.account import app_settings 
+from allauth.utils import import_attribute  
+from biddingproject.settings import EMAIL_CONFIRM_REDIRECT_BASE_URL
+
+class CustomAccountAdapter(DefaultAccountAdapter):    
+    def get_email_confirmation_url(self, request, emailconfirmation):
+        return  EMAIL_CONFIRM_REDIRECT_BASE_URL  + emailconfirmation.key
+
+def get_adapter(request=None):
+    """     The Adapter in app_settings.ADAPTER is set to CustomAccountAdapter.     """
+    return import_attribute(app_settings.ADAPTER)(request)
