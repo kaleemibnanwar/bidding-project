@@ -1,0 +1,24 @@
+<nav class="navbar">
+	<div class="container">
+		<div class="logo">Bider Associations</div>
+		<div style="display: inline;">
+		<ul class="nav-links">
+			<li><a routerLink="/">Home</a></li>
+			<li><a routerLink="/jobs">My Jobs</a></li>
+			<li><a routerLink="/submitted-purposals">My Proposals</a></li>
+			<li><a routerLink="/create-job">Post a job</a></li>
+			<li><a routerLink="/profile">Profile</a></li>
+		</ul>
+		<ul class="nav-links" style="float: right;margin-top: -18px;">
+	      <ng-container *ngIf="user$ | async as user;">
+		      <ng-container *ngIf="user.pk;">
+				<li><a (click)="logout()">Logout</a></li>
+			</ng-container>
+		</ng-container>
+	    <ng-container *ngIf="!(user$ | async);">
+			<li><a routerLink="/signup">Signup</a></li>
+		</ng-container>
+		</ul>
+		</div>
+	</div>
+</nav>

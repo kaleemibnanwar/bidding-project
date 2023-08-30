@@ -1,0 +1,32 @@
+<div class="panel center">
+  <div class="card">
+    <ng-container *ngIf="registered; else registrationForm">
+      <div>
+        <h3>Verification Email Sent...</h3>
+        <p>Please check your email for the activation link.</p>
+        <button routerLink="/login">Login</button>
+      </div>
+    </ng-container>
+    
+    <ng-template #registrationForm>
+      <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm.value)">
+        <h1>Register a new account</h1>
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" ngModel required/>
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="password" name="password1" ngModel required/>
+        </div>
+        <div>
+          <label>Confirm Password</label>
+          <input type="password" name="password2" ngModel required/>
+        </div>
+        <div>
+          <button type="submit">Get Account</button>
+        </div>
+      </form>
+    </ng-template>
+  </div>
+</div>

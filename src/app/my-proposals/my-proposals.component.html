@@ -1,0 +1,17 @@
+<div class="container">
+	<div style="display:flex; margin-top: 30px;">
+		<div style="width:70%;">
+			<div>
+				<h2>My Proposals</h2>
+				<ul>
+					<div *ngFor="let proposal of proposals">
+						<app-bid-card
+							[bid]="proposal"
+							(success)="loadProposals()"
+						></app-bid-card>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

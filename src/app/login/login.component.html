@@ -1,0 +1,18 @@
+<div class="panel center">
+	<div class="card">
+		<form #login="ngForm" (ngSubmit)="userLogin(login.value)">
+			<h1>Login</h1>
+			<div>
+				<label>Email</label>
+				<input type="text" name="email" ngModel/>
+			</div>
+			<div>
+				<label>Password</label>
+				<input type="password" name="password" ngModel/>
+			</div>
+			<div>
+				<button type="submit">Login</button>
+			</div>
+		</form>
+	</div>
+</div>

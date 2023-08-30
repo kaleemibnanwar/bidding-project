@@ -1,0 +1,11 @@
+<form [formGroup]="bidForm" (ngSubmit)="submit()">
+  <div>
+    <label for="amount">Bid Amount:</label>
+    <input type="number" id="amount" formControlName="amount">
+  </div>
+  <div>
+    <label for="purposal">Purposal:</label>
+    <textarea id="purposal" formControlName="purposal"></textarea>
+  </div>
+  <button type="submit">Submit Bid</button>
+</form>

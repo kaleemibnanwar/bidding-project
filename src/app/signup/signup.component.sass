@@ -1,0 +1,55 @@
+$primary-color: #3498db
+$secondary-color: #e74c3c
+$text-color: #333
+$font-size: 16px
+
+.panel
+  &.center 
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    background-color: #f4f4f4
+
+.card 
+  padding: 20px
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  width: 400px
+  margin-bottom: 70px
+
+  form 
+
+    h1 
+      font-size: 24px
+      margin-bottom: 20px
+      color: $primary-color
+
+    div 
+      margin-bottom: 15px
+      label 
+        display: block
+        margin-bottom: 5px
+        color: $text-color
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] 
+        width: 95%
+        padding: 10px
+        border: 1px solid #ccc
+        border-radius: 3px
+        font-size: $font-size    
+
+button 
+  background-color: $primary-color
+  color: #fff
+  padding: 10px 20px
+  border: none
+  border-radius: 3px
+  font-size: $font-size
+  cursor: pointer
+  &:hover 
+    background-color: darken($primary-color, 10%)
+      

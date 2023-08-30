@@ -1,0 +1,16 @@
+<div class="container">
+	<div style="display:flex; margin-top: 30px;">
+		<div style="width:70%;">
+			<div>
+				<h2>My Jobs</h2>
+				<ul>
+					<div *ngFor="let job of jobs">
+							<app-job-card
+								[job]="job"
+							></app-job-card>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<div style="padding:50px">
+<h2>Job</h2>
+<app-job-card
+	[job]="job"
+></app-job-card>
+
+<ng-container *ngIf="user$ | async as user;">
+    <ng-container *ngIf="user.pk === job.owner">
+		<h2 style="margin-top:20px">Proposals</h2>
+					<div *ngFor="let bid of bids">
+		<app-bid-card [bid]="bid"></app-bid-card>
+					</div>
+  
+   </ng-container>
+</ng-container>
+</div>

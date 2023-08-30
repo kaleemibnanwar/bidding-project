@@ -1,0 +1,14 @@
+<div>
+  <form class="form" [formGroup]="jobForm" (ngSubmit)="submit()">
+  <h2>Create Job</h2>
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" required>    
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <label for="budget">Budget:</label>
+    <input id="budget" type="number" formControlName="budget"/>
+    <label for="deadline">Deadline:</label>
+    <input id="deadline" formControlName="deadline" type="date" />
+    <button type="submit" [disabled]="jobForm.invalid">Create</button>
+  </form>
+</div>

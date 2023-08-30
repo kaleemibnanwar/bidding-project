@@ -1,0 +1,13 @@
+<div class="job-card">
+  <p class="job-description">{{ bid.purposal }}</p>
+  <div class="job-footer">
+    <p class="job-price">${{ bid.amount }}</p>
+    <div class="buttons">
+      <ng-container *ngIf="user$ | async as user;">
+        <ng-container *ngIf="user.pk === bid.bidder">
+          <button class="mx-1" (click)="deleteBid(bid.id)">Delete</button>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="profile-container">
+  <div class="profile-heading">Profile</div>
+  <ng-container *ngIf="user$ | async as user;">
+  <div class="profile-details">
+    <div class="profile-field">
+      <strong>First Name:</strong> {{ user.first_name }}
+    </div>
+    <div class="profile-field">
+      <strong>Last Name:</strong> {{ user.last_name }}
+    </div>
+    <div class="profile-field">
+      <strong>Email:</strong> {{ user.email }}
+    </div>
+  </div>
+  </ng-container>
+</div>
